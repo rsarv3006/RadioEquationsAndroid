@@ -1,6 +1,5 @@
 package com.example.radioequations_android
 
-import models.EquationsTableInfo
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -21,6 +20,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.radioequations_android.ui.theme.RadioEquationsAndroidTheme
+import models.EquationsTableInfo
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
