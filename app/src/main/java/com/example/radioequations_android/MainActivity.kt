@@ -7,7 +7,6 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
@@ -28,7 +27,7 @@ class MainActivity : ComponentActivity() {
                 Surface(
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    ScrollItems()
+                    HomeScrollView()
                 }
             }
         }
@@ -36,7 +35,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun ScrollItems() {
+fun HomeScrollView() {
     Column(
         modifier = Modifier.verticalScroll(rememberScrollState()).fillMaxSize()
     ) {
@@ -52,18 +51,11 @@ fun ScrollItems() {
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun HomeScrollViewPreview() {
     RadioEquationsAndroidTheme {
-        Greeting("Android")
+        HomeScrollView()
     }
 }
