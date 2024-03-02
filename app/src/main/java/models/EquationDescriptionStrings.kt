@@ -1,4 +1,4 @@
-package Models
+package models
 
 
 const val VoltageCurrentResistanceDescriptionString = """

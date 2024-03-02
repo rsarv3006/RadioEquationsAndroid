@@ -1,4 +1,4 @@
-package Models
+package models
 
 enum class EquationFilterVariant {
     AdvancedFunctions;

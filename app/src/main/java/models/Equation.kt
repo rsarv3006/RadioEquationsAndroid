@@ -1,7 +1,9 @@
-package Models
+package models
+
+import com.vkochenkov.equationdisplayerlib.EquationItem
 
 data class Equation(
-    val title: String,
+    val title: EquationItem,
     val description: String,
     val id: EquationId,
     val filters: List<EquationFilterVariant>
