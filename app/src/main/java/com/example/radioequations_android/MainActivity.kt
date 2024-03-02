@@ -37,15 +37,15 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun HomeScrollView() {
     Column(
-        modifier = Modifier.verticalScroll(rememberScrollState()).fillMaxSize()
+        modifier = Modifier
+            .verticalScroll(rememberScrollState())
+            .fillMaxSize()
     ) {
         EquationsTableInfo.forEach { section ->
             Text(section.title, fontSize = 24.sp, modifier = Modifier.padding(16.dp))
 
             section.equations.forEach { equation ->
-
                 Text(equation.title)
-
             }
         }
     }
