@@ -21,7 +21,7 @@ import models.Equation
 import models.EquationsTableInfo
 
 @Composable
-fun TabScreen(equation: Equation) {
+fun EquationTabScreen(equation: Equation) {
     var tabIndex by remember { mutableIntStateOf(0) }
 
     val tabs = listOf("Equation", "Description" )
@@ -57,7 +57,7 @@ fun HomeScreen() {
 @Composable
 fun EquationTabViewPreview() {
     RadioEquationsAndroidTheme {
-        TabScreen(equation = EquationsTableInfo.first().equations.first())
+        EquationTabScreen(equation = EquationsTableInfo.first().equations.first())
     }
 }
 

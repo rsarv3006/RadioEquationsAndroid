@@ -25,8 +25,7 @@ Alternatively, it can be rearranged to solve for other variables. For example, i
 val PowerVoltageCurrentDescriptionString = listOf(
     "The equation",
     PowerVoltageCurrentTitle,
-    """"
-represents the relationship between power (P), electrical energy (E), and current (I) in an electrical circuit.
+    """represents the relationship between power (P), electrical energy (E), and current (I) in an electrical circuit.
 
 Here's a breakdown of each component:
 
@@ -45,8 +44,7 @@ In practical terms, this equation is commonly used to calculate the power consum
 val PowerCurrentResistanceDescriptionString = listOf(
     "The equation",
     ResistancePowerCurrentTitle,
-    """
-represents the relationship between power (P), current (I), and resistance (R) in an electrical circuit.
+    """represents the relationship between power (P), current (I), and resistance (R) in an electrical circuit.
 
 Here's a breakdown of each component:
 
@@ -70,8 +68,7 @@ In practical terms, this equation is commonly used to calculate the power dissip
 val PowerVoltageResistanceDescriptionString = listOf(
     "The equation",
     PowerVoltageResistanceTitle,
-    """
-represents the relationship between power (P), electrical energy (E), and resistance (R) in an electrical circuit.
+    """represents the relationship between power (P), electrical energy (E), and resistance (R) in an electrical circuit.
 
 Here's a breakdown of each component:
 
@@ -96,14 +93,12 @@ In practical terms, this equation is commonly used to calculate the power dissip
 """
 )
 
-val AntennaGainDescriptionString = listOf("""
-The antenna gain equation calculates the gain of an antenna in decibels (dB). The gain represents how much an antenna concentrates radio frequency energy in a particular direction, if the antenna is a non-omnidirectional antenna.  If it is an omni-directional antenna, then the gain or main-lobe of the radio frequency energy is assumed to radiate in a 360-degree pattern, as in a sphere-shaped pattern.
+val AntennaGainDescriptionString = listOf("""The antenna gain equation calculates the gain of an antenna in decibels (dB). The gain represents how much an antenna concentrates radio frequency energy in a particular direction, if the antenna is a non-omnidirectional antenna.  If it is an omni-directional antenna, then the gain or main-lobe of the radio frequency energy is assumed to radiate in a 360-degree pattern, as in a sphere-shaped pattern.
 
 The formula is:
 """,
     AntennaGainDbTitle,
-    """
-Where:
+    """Where:
 
 Output power is the power radiated by the antenna in the direction of peak radiation intensity. This is measured in watts (W).
 Input power is the power supplied to the antenna at its input terminals. This is also measured in watts.
