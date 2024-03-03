@@ -69,4 +69,5 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
     implementation("com.github.vkochenkov:EquationDisplayer:1.2")
+    implementation("androidx.compose.material:material-icons-extended")
 }
