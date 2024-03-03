@@ -72,9 +72,7 @@ class MainActivity : ComponentActivity() {
                             composable(RadioEquationsScreen.WELCOME.name) {
                                 HomeScrollView(navigateWithEquation = { equation ->
                                     equationToRender.value = equation
-                                    navHost.navigate(RadioEquationsScreen.EQUATION.name) {
-                                        popUpTo(RadioEquationsScreen.WELCOME.name) { inclusive = true }
-                                    }
+                                    navHost.navigate(RadioEquationsScreen.EQUATION.name)
                                 })
                             }
 
