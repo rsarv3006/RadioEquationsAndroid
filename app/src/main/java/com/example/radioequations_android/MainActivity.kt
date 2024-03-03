@@ -16,6 +16,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
@@ -25,6 +26,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.radioequations_android.ui.theme.RadioEquationsAndroidTheme
 import models.Equation
@@ -41,7 +43,27 @@ class MainActivity : ComponentActivity() {
                     val navHost = rememberNavController()
                     val equationToRender = rememberSaveable { mutableStateOf<Equation?>(null) }
 
-                    Scaffold {innerPadding ->
+                    val backStackEntry by navHost.currentBackStackEntryAsState()
+
+                    val currentScreen = RadioEquationsScreen.valueOf(
+                        backStackEntry?.destination?.route ?: RadioEquationsScreen.WELCOME.name
+                    )
+
+                    val shouldShowTopBar = currentScreen != RadioEquationsScreen.WELCOME
+
+                    Scaffold(
+                        topBar = {
+                            if (shouldShowTopBar) {
+                                RadioEquationsAppBar(
+                                    currentScreen = currentScreen,
+                                    canNavigateBack = backStackEntry?.destination?.route != RadioEquationsScreen.WELCOME.name,
+                                    navigateUp = {
+                                        navHost.popBackStack()
+                                    },
+                                )
+                            }
+                        }
+                    ) { innerPadding ->
                         NavHost(
                             navController = navHost,
                             startDestination = RadioEquationsScreen.WELCOME.name,

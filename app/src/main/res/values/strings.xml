@@ -2,4 +2,5 @@
     <string name="app_name">RadioEquations-Android</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="equation_screen">Equation</string>
+    <string name="back_button">Back</string>
 </resources>
