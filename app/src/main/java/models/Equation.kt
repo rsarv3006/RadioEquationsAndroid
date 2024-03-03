@@ -4,7 +4,7 @@ import com.vkochenkov.equationdisplayerlib.EquationItem
 
 data class Equation(
     val title: EquationItem,
-    val description: List<String>,
+    val description: List<Any>,
     val id: EquationId,
     val filters: List<EquationFilterVariant>
 )
