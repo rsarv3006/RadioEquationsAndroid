@@ -1,9 +1,6 @@
 package models
 
 enum class EquationId {
-    ohmsLaw,
-    powerEquation,
-    test,
     voltage1,
     voltage2,
     voltage3,

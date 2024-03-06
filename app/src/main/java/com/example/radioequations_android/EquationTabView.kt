@@ -42,15 +42,10 @@ fun EquationTabScreen(equation: Equation) {
             }
         }
         when (tabIndex) {
-            0 -> HomeScreen()
+            0 -> EquationCalculationScreen(equation = equation)
             1 -> EquationDescriptionScreen(equation = equation)
         }
     }
-}
-
-@Composable
-fun HomeScreen() {
-    Text("Home Screen")
 }
 
 @Preview(showBackground = true)
