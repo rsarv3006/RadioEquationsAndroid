@@ -1,4 +1,4 @@
-package com.example.radioequations_android
+package com.rjs_app_dev.radioequations_android
 
 import org.junit.Test
 

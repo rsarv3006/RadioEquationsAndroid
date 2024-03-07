@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.radioequations_android"
+    namespace = "com.rjs_app_dev.radioequations_android"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.radioequations_android"
+        applicationId = "com.rjs_app_dev.radioequations_android"
         minSdk = 31
         targetSdk = 34
         versionCode = 1

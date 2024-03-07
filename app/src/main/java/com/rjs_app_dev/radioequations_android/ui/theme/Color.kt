@@ -1,4 +1,4 @@
-package com.example.radioequations_android.ui.theme
+package com.rjs_app_dev.radioequations_android.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

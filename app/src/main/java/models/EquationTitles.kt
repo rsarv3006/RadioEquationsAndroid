@@ -3,7 +3,7 @@ package models
 import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.radioequations_android.ui.theme.RadioEquationsAndroidTheme
+import com.rjs_app_dev.radioequations_android.ui.theme.RadioEquationsAndroidTheme
 import com.vkochenkov.equationdisplayerlib.EquationItem
 
 val VoltageCurrentResistanceTitle = EquationItem(line = "E = I x R")

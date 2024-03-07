@@ -1,7 +1,7 @@
 package models
 
 import androidx.annotation.StringRes
-import com.example.radioequations_android.R
+import com.rjs_app_dev.radioequations_android.R
 
 enum class RadioEquationsScreen(@StringRes val title: Int) {
     WELCOME(title = R.string.app_name),

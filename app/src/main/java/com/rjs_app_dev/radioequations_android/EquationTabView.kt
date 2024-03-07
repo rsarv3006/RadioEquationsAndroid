@@ -1,4 +1,4 @@
-package com.example.radioequations_android
+package com.rjs_app_dev.radioequations_android
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -16,7 +16,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.radioequations_android.ui.theme.RadioEquationsAndroidTheme
+import com.rjs_app_dev.radioequations_android.ui.theme.RadioEquationsAndroidTheme
 import models.Equation
 import models.EquationsTableInfo
 

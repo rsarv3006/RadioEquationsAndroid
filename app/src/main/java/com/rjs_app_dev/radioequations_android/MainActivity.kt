@@ -1,4 +1,4 @@
-package com.example.radioequations_android
+package com.rjs_app_dev.radioequations_android
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -15,7 +15,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.example.radioequations_android.ui.theme.RadioEquationsAndroidTheme
+import com.rjs_app_dev.radioequations_android.ui.theme.RadioEquationsAndroidTheme
 import models.Equation
 import models.RadioEquationsScreen
 
