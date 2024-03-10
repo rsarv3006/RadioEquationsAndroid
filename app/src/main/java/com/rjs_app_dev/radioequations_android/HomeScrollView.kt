@@ -17,6 +17,7 @@ import androidx.compose.ui.unit.sp
 import com.rjs_app_dev.radioequations_android.ui.theme.RadioEquationsAndroidTheme
 import models.Equation
 import models.EquationsTableInfo
+import models.getTitleForEquationId
 
 @Composable
 fun HomeScrollView(navigateWithEquation: (Equation) -> Unit = {}) {
@@ -33,7 +34,7 @@ fun HomeScrollView(navigateWithEquation: (Equation) -> Unit = {}) {
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color.White,
                     )) {
-                    equation.title.Show()
+                    getTitleForEquationId(equation.id).Show()
                 }
             }
         }

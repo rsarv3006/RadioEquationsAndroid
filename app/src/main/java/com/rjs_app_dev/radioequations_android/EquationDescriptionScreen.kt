@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.vkochenkov.equationdisplayerlib.EquationItem
 import models.Equation
+import models.getEquationDescriptionString
 
 @Composable
 fun EquationDescriptionScreen(equation: Equation) {
@@ -18,7 +19,7 @@ fun EquationDescriptionScreen(equation: Equation) {
         .verticalScroll(rememberScrollState())
         .padding(16.dp)
         .fillMaxSize()) {
-        equation.description.forEach {item ->
+        getEquationDescriptionString(equation.id).forEach {item ->
             when (item) {
                 is String -> Text(text = item)
                 is EquationItem -> item.Show()

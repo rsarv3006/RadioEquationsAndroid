@@ -22,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import com.rjs_app_dev.radioequations_android.ui.theme.RadioEquationsAndroidTheme
 import models.Equation
 import models.EquationsTableInfo
+import models.getTitleForEquationId
 
 @Composable
 fun EquationCalculationScreen(equation: Equation) {
@@ -31,12 +32,11 @@ fun EquationCalculationScreen(equation: Equation) {
             .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        val valuesState = remember {
-            mutableStateOf(DoubleArray(equation.labels.size))
-        }
+        val initialValues = DoubleArray(equation.labels.size)
+        val valuesState = remember { mutableStateOf(initialValues) }
 
         Spacer(modifier = Modifier.height(16.dp))
-        equation.title.Show()
+        getTitleForEquationId(equation.id).Show()
 
         Column(modifier = Modifier.padding(16.dp)) {
             for (i in 0 until equation.labels.size) {

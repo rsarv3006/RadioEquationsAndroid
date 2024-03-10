@@ -57,6 +57,29 @@ val AntennaGainP2Title = EquationItem(line = listOf(
     EquationItem(line = "10", superscript = "db x 10")
 ))
 
+fun getTitleForEquationId(id: EquationId): EquationItem {
+    return when (id) {
+        EquationId.voltage1 -> VoltageCurrentResistanceTitle
+        EquationId.voltage2 -> VoltagePowerCurrentTitle
+        EquationId.voltage3 -> VoltagePowerResistanceTitle
+        EquationId.resistance1 -> ResistanceVoltageCurrentTitle
+        EquationId.resistance2 -> ResistancePowerCurrentTitle
+        EquationId.resistance3 -> ResistanceVoltagePowerTitle
+        EquationId.current1 -> CurrentVoltageResistanceTitle
+        EquationId.current2 -> CurrentPowerVoltageTitle
+        EquationId.current3 -> CurrentPowerResistanceTitle
+        EquationId.power1 -> PowerVoltageCurrentTitle
+        EquationId.power2 -> PowerVoltageResistanceTitle
+        EquationId.power3 -> PowerCurrentResistanceTitle
+        EquationId.antennaGain1 -> AntennaGainDbTitle
+        EquationId.antennaGain2 -> AntennaGainP1Title
+        EquationId.antennaGain3 -> AntennaGainP2Title
+        else -> {
+            EquationItem(line = "NOT FOUND")
+        }
+    }
+}
+
 @Preview(showBackground = true)
 @Composable
 fun EquationTitlePreviews() {

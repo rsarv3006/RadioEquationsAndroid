@@ -2,6 +2,7 @@ package models
 
 import com.vkochenkov.equationdisplayerlib.EquationItem
 
+
 val VoltageCurrentResistanceDescriptionString = listOf(
     "The equation",
     VoltageCurrentResistanceTitle,
@@ -109,3 +110,26 @@ The ratio of output power to input power gives the power gain of the antenna. Ta
 So in summary, this formula takes the ratio of output to input power, takes the logarithm to get the absolute gain, and then converts to decibels to calculate the total antenna gain. The higher the gain in dB, the more intense the antenna radiation is in a particular direction (if a non-omnidirectional antenna) or not (if an omnidirectional antenna.)
 """
 )
+
+fun getEquationDescriptionString(id: EquationId): List<Any> {
+    return when (id) {
+        EquationId.voltage1 -> VoltageCurrentResistanceDescriptionString
+        EquationId.voltage2 -> PowerVoltageCurrentDescriptionString
+        EquationId.voltage3 -> PowerVoltageResistanceDescriptionString
+        EquationId.resistance1 -> VoltageCurrentResistanceDescriptionString
+        EquationId.resistance2 -> PowerCurrentResistanceDescriptionString
+        EquationId.resistance3 -> PowerVoltageResistanceDescriptionString
+        EquationId.current1 -> VoltageCurrentResistanceDescriptionString
+        EquationId.current2 -> PowerVoltageCurrentDescriptionString
+        EquationId.current3 -> PowerCurrentResistanceDescriptionString
+        EquationId.power1 -> PowerVoltageCurrentDescriptionString
+        EquationId.power2 -> PowerVoltageResistanceDescriptionString
+        EquationId.power3 -> PowerCurrentResistanceDescriptionString
+        EquationId.antennaGain1 -> AntennaGainDescriptionString
+        EquationId.antennaGain2 -> AntennaGainDescriptionString
+        EquationId.antennaGain3 -> AntennaGainDescriptionString
+        else -> {
+            listOf("No description available")
+        }
+    }
+}
