@@ -8,6 +8,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ElevatedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
@@ -16,6 +18,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -36,7 +39,17 @@ fun EquationCalculationScreen(equation: Equation) {
         val valuesState = remember { mutableStateOf(initialValues) }
 
         Spacer(modifier = Modifier.height(16.dp))
-        getTitleForEquationId(equation.id).Show()
+
+        Button(onClick = { },
+            enabled = false,
+            colors = ButtonDefaults.buttonColors(
+                containerColor = Color.White,
+                disabledContainerColor = Color.White
+            )) {
+            getTitleForEquationId(equation.id).Show()
+        }
+
+
 
         Column(modifier = Modifier.padding(16.dp)) {
             for (i in 0 until equation.labels.size) {

@@ -12,7 +12,7 @@ android {
         applicationId = "com.rjs_app_dev.radioequations_android"
         minSdk = 31
         targetSdk = 34
-        versionCode = 1
+        versionCode = 3
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
