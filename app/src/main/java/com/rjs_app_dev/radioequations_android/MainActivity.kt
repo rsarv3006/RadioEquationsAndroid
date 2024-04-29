@@ -44,6 +44,9 @@ class MainActivity : ComponentActivity() {
                                     navigateUp = {
                                         navHost.popBackStack()
                                     },
+                                    goToSettings = {
+                                        navHost.navigate(RadioEquationsScreen.SETTINGS.name)
+                                    }
                                 )
                         }
                     ) { innerPadding ->
@@ -61,6 +64,10 @@ class MainActivity : ComponentActivity() {
 
                             composable(RadioEquationsScreen.EQUATION.name) {
                                 EquationTabScreen(equation = equationToRender.value!!)
+                            }
+
+                            composable(RadioEquationsScreen.SETTINGS.name) {
+                                SettingsScreen()
                             }
                         }
                     }

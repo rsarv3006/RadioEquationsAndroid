@@ -3,4 +3,5 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="equation_screen">Equation</string>
     <string name="back_button">Back</string>
+    <string name="settings_screen">Settings</string>
 </resources>
